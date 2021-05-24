@@ -6,10 +6,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import utest2.models.UserData;
+import utest2.questions.Answer;
 import utest2.tasks.*;
 
 import java.util.List;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class UtestStepdefinitions {
@@ -33,6 +35,7 @@ public class UtestStepdefinitions {
     }
 
     @Then("^I Sig up on the utest\\.$")
-    public void iSigUpOnTheUtest()  {
+    public void iSigUpOnTheUtest(List<UserData> userData)  throws Exception{
+        //theActorInTheSpotlight().should(seeThat(Answer.CorfirmTheLastStep(userData)));
     }
 }

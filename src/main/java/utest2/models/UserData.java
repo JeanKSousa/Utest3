@@ -136,6 +136,15 @@ public class UserData {
     private String mobil;
     private String model;
     private String system;
+    private String question;
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
 
     public String getPassword() {
         return password;
