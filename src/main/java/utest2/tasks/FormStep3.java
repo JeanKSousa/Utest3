@@ -25,11 +25,11 @@ public class FormStep3 implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(UtestForm.COMPUTER),
-                Enter.theValue(userData.get(0).getComputer()).into(UtestForm.INPUT_COMPUTER),
+                Enter.theValue(userData.get(0).getComputer()+ Keys.ENTER).into(UtestForm.INPUT_COMPUTER),
                 Click.on(UtestForm.VERSION),
-                Enter.theValue(userData.get(0).getVersion()).into(UtestForm.INPUT_VERSION),
+                Enter.theValue(userData.get(0).getVersion()+ Keys.ENTER).into(UtestForm.INPUT_VERSION),
                 Click.on(UtestForm.LANGUAGE_DEVICE),
-                Enter.theValue(userData.get(0).getLanguage()).into(UtestForm.INPUT_LANGUAGE_DEVICE),
+                Enter.theValue(userData.get(0).getLanguage()+ Keys.ENTER).into(UtestForm.INPUT_LANGUAGE_DEVICE),
                 Click.on(UtestForm.MOBIL),
                 Enter.theValue(userData.get(0).getMobil() + Keys.ENTER).into(UtestForm.INPUT_MOBIL),
                 Click.on(UtestForm.MODEL),
@@ -37,8 +37,6 @@ public class FormStep3 implements Task {
                 Click.on(UtestForm.SYSTEM),
                 Enter.theValue(userData.get(0).getSystem()+ Keys.ENTER).into(UtestForm.INPUT_SYSTEM),
                 Click.on(UtestForm.NEXT3)
-
-
         );
     }
 }
